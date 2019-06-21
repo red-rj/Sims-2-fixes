@@ -14,5 +14,7 @@ Linux /home/$username/Documents/EA Games/The Sims 2/Downloads/
 
 
 Note: userstartup.cheat is located in Documents/EA Games/The Sims 2/Config/
-Linux/Wine users may want to have
+Linux/Wine users may want to consider and have
 boolprop useshaders true
+boolProp   createNVidiaWorkaroundTexture false
+boolProp   bumpMapping false
