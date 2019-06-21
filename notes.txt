@@ -11,6 +11,7 @@ Install Location:
 
 Windows Users/%username%/Documents/EA Games/The Sims 2/Downloads/
 Linux /home/$username/Documents/EA Games/The Sims 2/Downloads/
+Or I you're using Lutris/PlayOnLinux consider finding your chosen path or environment name
 
 
 Note: userstartup.cheat is located in Documents/EA Games/The Sims 2/Config/
