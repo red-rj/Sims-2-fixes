@@ -1,1 +1,18 @@
 also ref http://modthesims.info/d/569585
+
+Graphics Rules.sgr can be installed/replaced here:
+Sims 2 (game or expansion pack)/TSData/Res/Config/
+
+Edit 2019/06/21:
+Install these mods: https://github.com/tannisroot/installer-fixes/raw/master/sims2_fixes.tar.xz
+simNopke-simShadowFix0.4 - Shadows fix for modern hardware
+thumbnails_fix - Linux/Wine Fix (Not must have for Windows OS Users)
+Install Location:
+
+Windows Users/%username%/Documents/EA Games/The Sims 2/Downloads/
+Linux /home/$username/Documents/EA Games/The Sims 2/Downloads/
+
+
+Note: userstartup.cheat is located in Documents/EA Games/The Sims 2/Config/
+Linux/Wine users may want to have
+boolprop useshaders true
