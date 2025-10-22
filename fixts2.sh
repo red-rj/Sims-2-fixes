@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 # This script will attempt to apply the patches automatically
+# we assume you're using Ultimate Collection
 
 usage(){
-    echo fixts2.sh prefix prefix-user=steamuser
+    echo usage: fixts2.sh prefix [prefix-user=steamuser]
     exit
 }
 
@@ -14,7 +15,7 @@ fi
 
 prefix=$1
 user=${2:-steamuser}
-DEBUG=1
+#DEBUG=1
 
 C="$prefix/drive_c"
 sgr_path="$C/Program Files/EA Games/The Sims 2 Ultimate Collection/Fun with Pets/SP9/TSData/Res/Config"
@@ -29,7 +30,7 @@ then echo game dir not found!
     exit 13
 fi
 
-if [ ! -d "$C/users/$user" ]; then
+if [[ ! -d "$C/users/$user" ]]; then
     echo "user folder doesn't exist"
     echo "is $user the correct user?"
     exit 14
