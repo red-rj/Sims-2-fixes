@@ -19,11 +19,16 @@ log $logGroup $logLevelInfo "Parsing configuration script"
 seti Off 0
 seti On  1
 
-seti Low    3
-seti Medium 3
+seti Low    1
+seti Medium 2
 seti High   3
-
 seti MediumButDefaultLow 4
+
+# HACK
+seti Low $High
+seti Medium $High
+seti MediumButDefaultLow $High
+
 
 seti memoryLevelHigh    512
 seti memoryLevelMedium  384
@@ -772,29 +777,33 @@ option SpecialEventCamera
       
 end
 
+# HACK
+# set your monitor resolution here
+seti newResWidth 1920
+seti newResHeight 1080
 
 option ScreenModeResolution
    setting $Low
-      uintProp maxResWidth      1920
-      uintProp maxResHeight     1080
+      uintProp maxResWidth      $newResWidth
+      uintProp maxResHeight     $newResHeight
       uintProp defaultResWidth  800
       uintProp defaultResHeight 600
 
    setting $MediumButDefaultLow
-      uintProp maxResWidth      1920
-      uintProp maxResHeight     1080
+      uintProp maxResWidth      $newResWidth
+      uintProp maxResHeight     $newResHeight
       uintProp defaultResWidth  800
       uintProp defaultResHeight 600
 
    setting $Medium
-      uintProp maxResWidth      1920
-      uintProp maxResHeight     1080
+      uintProp maxResWidth      $newResWidth
+      uintProp maxResHeight     $newResHeight
       uintProp defaultResWidth  1024
       uintProp defaultResHeight 768
 
    setting $High
-      uintProp maxResWidth      1920
-      uintProp maxResHeight     1080
+      uintProp maxResWidth      $newResWidth
+      uintProp maxResHeight     $newResHeight
       uintProp defaultResWidth  1024
       uintProp defaultResHeight 768
 end

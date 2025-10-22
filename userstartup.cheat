@@ -1,0 +1,3 @@
+boolprop useshaders true
+boolProp createNVidiaWorkaroundTexture false
+boolProp bumpMapping false
