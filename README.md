@@ -33,6 +33,12 @@ best for you.
 ## Note for Linux/Steam Deck enjoyers
 When following this guide, all paths are relative to the Prefix used by your compatibility tool (Bottles, Lutris, PlayOnLinux). 
 
+## Reference
+
+- http://simsvip.com/2014/07/20/the-sims-2-ultimate-collection-increase-resolution-guide/
+- https://github.com/tannisroot/installer-fixes
+
+
 notes:
 ---
         also ref http://modthesims.info/d/569585
