@@ -3,8 +3,7 @@
 # we assume you're using Ultimate Collection
 
 usage(){
-    echo usage: fixts2.sh prefix [prefix-user=steamuser]
-    exit
+    echo usage: fixts2.sh prefix [prefix-user]
 }
 
 if [ -z $1 ]
@@ -14,12 +13,15 @@ then echo Prefix not found; usage ; exit 12
 fi
 
 prefix=$1
-user=${2:-steamuser}
+user=$2
 #DEBUG=1
 
 C="$prefix/drive_c"
 sgr_path="$C/Program Files/EA Games/The Sims 2 Ultimate Collection/Fun with Pets/SP9/TSData/Res/Config"
-ts2docs="$C/users/$user/Documents/The Sims 2"
+
+if [[ -z $user ]]; then
+    user=$(ls "$C/users" | grep -v Public | head -n1)
+fi
 
 if [[ -n $DEBUG ]]
 then mkdir -p "$sgr_path" "$C/users/$user"
@@ -36,6 +38,7 @@ if [[ ! -d "$C/users/$user" ]]; then
     exit 14
 fi
 
+ts2docs="$C/users/$user/Documents/The Sims 2"
 mkdir -p "$ts2docs/Config"
 mkdir -p "$ts2docs/Download"
 
